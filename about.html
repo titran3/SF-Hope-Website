@@ -37,26 +37,6 @@
     </div>
   </div>
   <!-- ***** Preloader End ***** -->
-
-  <!-- Pre-header Starts -->
-  <div class="pre-header">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-sm-8 col-7">
-          <ul class="info">
-            <li><a href="mailto:sanfranciscohopeproject@gmail.com"><i class="fa fa-envelope"></i>sanfranciscohopeproject@gmail.com</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-4 col-sm-4 col-5">
-          <ul class="social-media">
-            <li><a href="https://www.instagram.com/sfhopeproject/"><i class="fa fa-instagram"></i></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Pre-header End -->
-
   <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
     <div class="container">
@@ -70,13 +50,28 @@
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-                <li class="scroll-to-section"><a href="/index.html">Home</a></li>
-                <li class="scroll-to-section"><a href="/about.html" class="active">Meet Our Team</a></li>
-                <li class="scroll-to-section"><a href="/initiatives.html">Initiatives</a></li>
-                <li class="scroll-to-section"><a href="/progress.html">Our Progress</a></li> 
-                <li class="scroll-to-section"><a href="/contact.html">Contact Us</a></li> 
-                <li class="scroll-to-section"><div class="border-first-button active"><a href="/support.html">Support Us!</a></div></li> 
-            </ul>        
+              <li class="scroll-to-section"><a href="/index.html">Home</a></li>
+              <li class="scroll-to-section "><a class="active" href="/about.html">Meet Our Team</a></li>
+              <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown('initiativesDropdown')">Initiatives &#9662;</a>
+                <div class="dropdown-content hidden" id="initiativesDropdown">
+                  <a href="/patient.html" >Patient Wellness Kits</a>
+                  <a href="/resilience.html">Resilience Support Kits</a>
+                  <a href="/wigs.html">Empowigs</a>
+                  <a href="/tote.html">Canvas of Hope & Support</a>
+                </div>
+              </li>
+              <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown('progressDropdown')">Our Progress &#9662;</a>
+                <div class="dropdown-content hidden" id="progressDropdown">
+                  <a href="/progress.html">Funding</a>
+                  <a href="#">Milestones</a>
+                  <a href="/photo.html">Photo Gallery</a>
+                </div>
+              </li>
+              <li class="scroll-to-section"><a href="/contact.html">Contact Us</a></li> 
+              <li class="scroll-to-section"><div class="border-first-button"><a href="/support.html">Support Us!</a></div></li> 
+            </ul>             
             <a class='menu-trigger'>
                 <span>Menu</span>
             </a>
@@ -114,9 +109,9 @@
                                           <div class="menu">
                                             <div class="first-thumb">
                                               <div class="thumb wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
-                                                <img src="assets/images/wigs.png" alt="">Mandy Zhao</span>
-                                                <p><em>Executive Director</em></p>
-                                                <p>Fun Fact:</p>
+                                                <img class="pfp" src="assets/images/mandy.jpeg" alt=""><span style="color:#fa65b1">Mandy Zhao</span>
+                                                <p style="font-weight: 600; color:black;">Executive Director</p>
+                                                <p style="color:black;">I grew up as a caretaker for my family as they faced health disparities, which made me aware of the inequities with the community. As a community funder for the YMCA, I was inspired by impactful youth-led projects, leading me to start SF HOPE to amplify the voices of future leaders and drive positive change in underserved and under-resourced communities. </p>
                                               </div>
                                             </div>
                                             <div>
@@ -124,20 +119,34 @@
                                                 <img src="assets/images/wigs.png" alt="">Skylar Dang</span>
                                                 <p><em>Associate Director</em></p>
                                                 <p>Fun Fact:</p>
-                                              </div>
+                                              </div> 
                                             </div>
                                             <div>
                                               <div class="thumb wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">                 
-                                                <img src="assets/images/wigs.png" alt="">Mandy Zhao</span>
+                                                <img class="pfp" src="assets/images/alison.jpeg" alt="">Allison Ha</span>
                                                 <p><em>Assistant Director</em></p>
-                                                <p>Fun Fact:</p>
+                                                <p>I joined SF Hope because I wanted to drive and make change within my community. I believe in supporting and providing resources for the underserved, and SF Hope's mission aligns with my goals.</p>
                                               </div>
                                             </div>
                                             <div>
                                               <div class="thumb wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">                 
-                                                <img src="assets/images/wigs.png" alt="">Timothy Tran</span>
+                                                <img class="pfp" src="assets/images/tim.png" alt="">Timothy Tran</span>
                                                 <p><em>Senior at Balboa High School</em></p>
                                                 <p>Fun Fact:</p>
+                                              </div>
+                                            </div>
+                                            <div>
+                                              <div class="thumb wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">                 
+                                                <img class="pfp" src="assets/images/dom.jpeg" alt="">Dominic Nguyen</span>
+                                                <p><em>Senior at Balboa High School</em></p>
+                                                <p>I joined SF Hope because I wanted to drive and make change within my community. I believe in supporting and providing resources for underserved communities, and SF Hope's mission aligns with my goals.</p>
+                                              </div>
+                                            </div>
+                                            <div>
+                                              <div class="thumb wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">                 
+                                                <img class="pfp" src="assets/images/sophia.jpeg" alt="">Sophia</span>
+                                                <p><em>Intern</em></p>
+                                                <p>I joined SF HOPE because I wanted to help people get through their struggles with as much ease as possible.</p>
                                               </div>
                                             </div>
                                               </div>
@@ -153,106 +162,7 @@
   <script src="assets/js/animation.js"></script>
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script src="assets/js/scroll.js"></script>
 
-</body>
-</html>
-   
-    
-      <!--<div id="services" class="services section">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
-                <h6>Our Mission</h6>
-                <h4>What Our Project <em>Provides</em></h4>
-                <div class="line-dec"></div>
-              </div>
-            </div>
-            <div class="col-lg-12">
-              <div class="naccs">
-                <div class="grid">
-                  <div class="row">
-                    <div class="col-lg-12">
-                      </div>
-                    </div> 
-                    <div class="col-lg-12">
-                      <ul class="nacc">
-                        <li class="active">
-                          <div>
-                            <div class="thumb">
-                              <div class="row">
-                                <div class="col-lg-6 align-self-center">
-                                  <div class="left-text">
-                                    <h4>Self-care Kits &amp; Merch</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt ut labore et dolore kengan darwin doerski token.
-                                      dover lipsum lorem and the others.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Audax negotium, dicerem impudens, nisi hoc institut translatum ad philosophos nostros esset.</p>
-                                  </div>
-                                </div>
-                                <div class="col-lg-6 align-self-center">
-                                  <div class="right-image">
-                                    <img src="assets/images/7746317.jpg" alt="">
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-    
-      <div id="contact" class="contact-us section">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 offset-lg-3">
-              <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-                <h6>Contact Us</h6>
-                <h4>Get In Touch With Us <em>Now</em></h4>
-                <div class="line-dec"></div>
-              </div>
-            </div>
-            <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
-              <form id="contact" action="" method="post">
-                <div class="row">
-                  <div class="col-lg-12">
-                    <div class="contact-dec">
-                      <img src="assets/images/contact-dec.png" alt="">
-                    </div>
-                  </div>
-                        <div class="col-lg-6">
-                          <fieldset>
-                            <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
-                          </fieldset>
-                          <fieldset>
-                            <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
-                          </fieldset>
-                          <fieldset>
-                            <input type="subject" name="subject" id="subject" placeholder="Subject" autocomplete="on">
-                          </fieldset>
-                        </div>
-                        <div class="col-lg-6">
-                          <fieldset>
-                            <textarea name="message" type="text" class="form-control" id="message" placeholder="Message" required=""></textarea>  
-                          </fieldset>
-                        </div>
-                        <div class="col-lg-12">
-                          <fieldset>
-                            <button type="submit" id="form-submit" class="main-button ">Send Message Now</button>
-                          </fieldset>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-
-
-    
 </body>
 </html>

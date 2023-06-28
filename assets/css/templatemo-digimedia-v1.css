@@ -452,7 +452,7 @@ header
 }
 
 .background-header .main-nav .nav li:hover a {
-  color: #fa65b1;
+
 }
 
 .background-header .nav li a.active {
@@ -571,12 +571,11 @@ header
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: #fa65b1!important;
+
 }
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
-  color: #fa65b1!important;
   opacity: 1;
 }
 
@@ -1426,12 +1425,31 @@ Services Style
   margin-bottom: 30px;
 }
 
+.services .naccs .menus div {
+  color: #2a2a2a;
+  margin: 0px;
+  max-height: 40%;  
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  border-radius: 15px;
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.services .naccs .menus img{
+  width: 100%;
+  object-fit: contain;
+}
 .services .naccs .menu div {
   color: #2a2a2a;
   margin: 0px;
-  width: 40%;
+  width: 30%;
   font-size: 20px;
   font-weight: 700;
+  padding: 20px 5px 20px 5px;
   display: inline-block;
   text-align: center;
   cursor: pointer;
@@ -1443,7 +1461,7 @@ Services Style
 .services .naccs .menu div {
   color: #2a2a2a;
   margin: 0px;
-  width: 30%;
+  width: 40%;
   font-size: 20px;
   font-weight: 700;
   padding: 20px 5px 20px 5px;
@@ -1520,6 +1538,78 @@ Services Style
 .services ul.nacc li .right-image img {
   max-width: 420px;
   float: right;
+}
+
+.hidden{
+  display:none;
+}
+
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: max-content;
+  min-width: 200px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.dropdown-content.fade-in {
+  opacity: 1;
+}
+
+.fade-in {
+  animation: fade-in 0.3s ease-in;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 8px;
+  transition: color 0.3s ease-in-out;
+}
+
+.dropdown-content a:hover:not(.active) {
+  color: #fa65b1;
+}
+
+.dropdown-content a.active,
+.dropdown-content a.always-pink:hover {
+  color: #fa65b1;
+}
+
+.nav li:not(.dropdown):hover > a,
+.nav li a.active {
+  color: #fa65b1;
+}
+
+.nav li:not(.dropdown):not(.initiatives-dropdown) a:hover,
+.nav li a.active:not(.initiatives-dropdown) {
+  color: #fa65b1;
+}
+
+.pfp{
+  aspect-ratio: 1/1;
+  border-radius: 15px;
+  object-fit: cover;
 }
 
 .services .nacc .thumb h4 {

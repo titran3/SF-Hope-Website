@@ -39,25 +39,6 @@
   </div>
   <!-- ***** Preloader End ***** -->
 
-  <!-- Pre-header Starts -->
-  <div class="pre-header">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-sm-8 col-7">
-          <ul class="info">
-            <li><a href="mailto:sanfranciscohopeproject@gmail.com"><i class="fa fa-envelope"></i>sanfranciscohopeproject@gmail.com</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-4 col-sm-4 col-5">
-          <ul class="social-media">
-            <li><a href="https://www.instagram.com/sfhopeproject/"><i class="fa fa-instagram"></i></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Pre-header End -->
-
   <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
     <div class="container">
@@ -71,13 +52,28 @@
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li class="scroll-to-section"><a href="/index.html" class="active">Home</a></li>
+              <li class="scroll-to-section active"><a href="/index.html">Home</a></li>
               <li class="scroll-to-section"><a href="/about.html">Meet Our Team</a></li>
-              <li class="scroll-to-section"><a href="/initiatives.html">Initiatives</a></li>
-              <li class="scroll-to-section"><a href="/progress.html">Our Progress</a></li> 
+              <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown('initiativesDropdown')">Initiatives &#9662;</a>
+                <div class="dropdown-content hidden" id="initiativesDropdown">
+                  <a href="/patient.html" >Patient Wellness Kits</a>
+                  <a href="/resilience.html">Resilience Support Kits</a>
+                  <a href="/wigs.html">Empowigs</a>
+                  <a href="/tote.html" >Canvas of Hope & Support</a>
+                </div>
+              </li>
+              <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown('progressDropdown')">Our Progress &#9662;</a>
+                <div class="dropdown-content hidden" id="progressDropdown">
+                  <a href="/progress.html">Funding</a>
+                  <a href="#">Milestones</a>
+                  <a href="/photo.html">Photo Gallery</a>
+                </div>
+              </li>
               <li class="scroll-to-section"><a href="/contact.html">Contact Us</a></li> 
               <li class="scroll-to-section"><div class="border-first-button"><a href="/support.html">Support Us!</a></div></li> 
-            </ul>        
+            </ul>           
             <a class='menu-trigger'>
                 <span>Menu</span>
             </a>
@@ -101,7 +97,7 @@
                     <h6>SF HOPE</h6>
                     <h2>San Francisco
                       Health Outreach for Public Equity</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Audax negotium, dicerem impudens, nisi hoc institut translatum ad philosophos nostros esset.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Audax negotium, dicerem impudens, nisi hoc institut translatum ad philosophos nostros esset.</p>
+                    <p>Health Outreach for Public Equity (HOPE) aims to empower communities facing disparities and hardships through resource provision and burden alleviation. As a youth-led organization, we hope to support and inspire the future leaders of this world.</p>
                   </div>
                 </div>
               </div>
@@ -135,6 +131,7 @@
   <script src="assets/js/animation.js"></script>
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script src="assets/js/scroll.js"></script>
 
 </body>
 </html>
