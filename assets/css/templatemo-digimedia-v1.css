@@ -2289,6 +2289,17 @@ footer p a {
 .desc2{
   position: absolute;top: 125px; right: 10px;
 }
+.resilience
+{
+  text-align: right;
+}
+.textright{
+  text-align: right;
+}
+.textleft{
+  text-align: left;
+}
+
 
 /* 
 ---------------------------------------------
@@ -2509,4 +2520,15 @@ responsive
   form#contact {
     padding: 30px;
   }
+  .resilience{
+    text-align: center;
+    margin-top:20%;
+  }
+  .textright{
+    text-align: center;
+  }
+  .textleft{
+    text-align: center;
+  }
+  
 }

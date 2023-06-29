@@ -71,7 +71,7 @@
                   <a href="/photo.html">Photo Gallery</a>
                 </div>
               </li>
-              <li class="scroll-to-section active"><a href="/contact.html">Contact Us</a></li> 
+              <li class="scroll-to-section"><a class="active" href="/contact.html">Contact Us</a></li> 
               <li class="scroll-to-section"><div class="border-first-button"><a href="/support.html">Support Us!</a></div></li> 
             </ul>         
             
@@ -128,7 +128,7 @@
                     </div>
                     <div class="col-lg-12">
                       <fieldset>
-                        <div onclick="sendEmail(); return false;" class="main-button submit">Send Message Now</div>
+                        <div onclick="sendEmail(); return false;" class="submit">Send Message Now</div>
                       </fieldset></form>
                     </div>
                   </div>
@@ -184,12 +184,12 @@
                    "Email: " + email + "<br>" +
                    "Message: " + msg + "<br>";
   
-        Email.send({
-          SecureToken: "a7380de7-a3c9-43b3-85ae-eb19aa7b828b",
-          To: "sanfranciscohopeproject@gmail.com",
-          From: "sanfranciscohopeproject@gmail.com",
-          Subject: subject,
-          Body: body,
+                   Email.send({
+      SecureToken: "204e0b41-6fae-4afe-b0a8-207c2720c752",
+      To: "sanfranciscohopeproject@gmail.com",
+      From: "sanfranciscohopeproject@gmail.com",  // Use the value of the email input field as the "From" address
+      Subject: subject,
+      Body: body,
         }).then(message => alert(message), function() {
           document.getElementById("name").value = "";
           document.getElementById("email").value = "";
