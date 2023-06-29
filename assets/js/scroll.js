@@ -8,7 +8,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   var dropdowns = document.getElementsByClassName("dropdown-content");
   for (var i = 0; i < dropdowns.length; i++) {
     dropdowns[i].classList.add("hidden");
@@ -38,7 +38,7 @@ function toggleDropdown(dropdownId) {
   }
 }
 
-window.addEventListener("click", function(event) {
+window.addEventListener("click", function (event) {
   var dropdowns = document.getElementsByClassName("dropdown-content");
   var links = document.getElementsByClassName("dropbtn");
 
@@ -55,10 +55,10 @@ window.addEventListener("click", function(event) {
     for (var i = 0; i < dropdowns.length; i++) {
       var openDropdown = dropdowns[i];
       var openLink = links[i];
-      if (openDropdown.classList.contains('fade-in')) {
-        openDropdown.classList.remove('fade-in');
-        openDropdown.classList.add('hidden');
-        openLink.classList.remove('active');
+      if (openDropdown.classList.contains("fade-in")) {
+        openDropdown.classList.remove("fade-in");
+        openDropdown.classList.add("hidden");
+        openLink.classList.remove("active");
       }
     }
   }
@@ -66,11 +66,11 @@ window.addEventListener("click", function(event) {
 
 var dropdownLinks = document.querySelectorAll(".dropdown-content a");
 for (var i = 0; i < dropdownLinks.length; i++) {
-  dropdownLinks[i].addEventListener("mouseenter", function() {
+  dropdownLinks[i].addEventListener("mouseenter", function () {
     this.style.color = "#fa65b1";
   });
 
-  dropdownLinks[i].addEventListener("mouseleave", function() {
+  dropdownLinks[i].addEventListener("mouseleave", function () {
     if (!this.classList.contains("active")) {
       this.style.color = "";
     }
@@ -79,19 +79,25 @@ for (var i = 0; i < dropdownLinks.length; i++) {
 
 var navLinks = document.querySelectorAll(".nav li:not(.dropdown) a");
 for (var i = 0; i < navLinks.length; i++) {
-  navLinks[i].addEventListener("mouseenter", function() {
+  navLinks[i].addEventListener("mouseenter", function () {
     for (var j = 0; j < navLinks.length; j++) {
       if (!navLinks[j].classList.contains("active")) {
         navLinks[j].style.color = "";
       }
     }
-    if (!this.classList.contains("active") && !this.classList.contains("initiative")) {
+    if (
+      !this.classList.contains("active") &&
+      !this.classList.contains("initiative")
+    ) {
       this.style.color = "#fa65b1";
     }
   });
 
-  navLinks[i].addEventListener("mouseleave", function() {
-    if (!this.classList.contains("active") && !this.classList.contains("initiative")) {
+  navLinks[i].addEventListener("mouseleave", function () {
+    if (
+      !this.classList.contains("active") &&
+      !this.classList.contains("initiative")
+    ) {
       this.style.color = "";
     }
   });
@@ -99,7 +105,7 @@ for (var i = 0; i < navLinks.length; i++) {
 
 var dropdownLinks = document.querySelectorAll(".dropdown-content a");
 for (var i = 0; i < dropdownLinks.length; i++) {
-  dropdownLinks[i].addEventListener("mouseenter", function() {
+  dropdownLinks[i].addEventListener("mouseenter", function () {
     for (var j = 0; j < dropdownLinks.length; j++) {
       if (!dropdownLinks[j].classList.contains("active")) {
         dropdownLinks[j].style.color = "";
@@ -110,19 +116,9 @@ for (var i = 0; i < dropdownLinks.length; i++) {
     }
   });
 
-  dropdownLinks[i].addEventListener("mouseleave", function() {
+  dropdownLinks[i].addEventListener("mouseleave", function () {
     if (!this.classList.contains("active")) {
       this.style.color = "";
     }
   });
 }
-
-// Apply initial active state
-var activeLinks = document.querySelectorAll(".nav li a.active");
-for (var i = 0; i < activeLinks.length; i++) {
-  activeLinks[i].style.color = "#fa65b1";
-}
-
-// Set the color of "Initiative" link to pink
-var initiativeLink = document.getElementById("initiativeLink");
-initiativeLink.style.color = "#fa65b1";
