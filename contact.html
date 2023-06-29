@@ -110,6 +110,7 @@
                 </div>
               </div>
                     <div class="col-lg-6">
+                      <form id="myForm">
                       <fieldset>
                         <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
                       </fieldset>
@@ -127,8 +128,8 @@
                     </div>
                     <div class="col-lg-12">
                       <fieldset>
-                        <button type="submit" id="form-submit" class="main-button ">Send Message Now</button>
-                      </fieldset>
+                        <div onclick="sendEmail(); return false;" class="main-button submit">Send Message Now</div>
+                      </fieldset></form>
                     </div>
                   </div>
                 </div>
@@ -158,6 +159,46 @@
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/custom.js"></script>
   <script src="assets/js/scroll.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    function validateForm() {
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let message = document.getElementById("message").value;
+  
+      // Check that the name, email, and message fields are filled
+      if (name === "" || email === "" || message === "") {
+        return false;
+      }
+  
+      return true;
+    }
+  
+    function sendEmail() {
+      if (validateForm()) {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let subject = document.getElementById("subject").value;
+        let msg = document.getElementById("message").value;
+        let body = "Name: " + name + "<br>" +
+                   "Email: " + email + "<br>" +
+                   "Message: " + msg + "<br>";
+  
+        Email.send({
+          SecureToken: "a7380de7-a3c9-43b3-85ae-eb19aa7b828b",
+          To: "sanfranciscohopeproject@gmail.com",
+          From: "sanfranciscohopeproject@gmail.com",
+          Subject: subject,
+          Body: body,
+        }).then(message => alert(message), function() {
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("subject").value = "";
+          document.getElementById("message").value = "";
+        });
+      }
+    }
+  </script>
 
 </body>
 </html>

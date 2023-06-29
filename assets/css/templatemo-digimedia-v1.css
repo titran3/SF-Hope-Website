@@ -873,7 +873,7 @@ header
     line-height: 50px !important;
     padding: 0px !important;
     border: none !important;
-    background: #f7f7f7 !important;
+    background: #f7f7f7 ;
     color: #191a20 !important;
   }
   .header-area .main-nav .nav li a:hover {
@@ -1550,8 +1550,8 @@ Services Style
 
 .dropdown {
   position: relative;
+  z-index: 9999;
 }
-
 .dropdown-content {
   position: absolute;
   background-color: white;
@@ -1597,11 +1597,13 @@ Services Style
   text-align: center;
   vertical-align: middle;
   line-height: 75px;
+  
 }
 
 .involve a {
   color: #fa65b1;
-  transition: 0.5s color ease-in;
+  transition: 0.5s background-color ease-in;
+  transition: 0.15s color ease-in;
 }
 .involve:hover {
   transform: translateY(-5px);
@@ -1640,7 +1642,7 @@ Services Style
 .nav li:not(.dropdown):not(.initiatives-dropdown) a:hover,
 .nav li a.active:not(.initiatives-dropdown) {
   color: #fa65b1;
-}
+} 
 @media (min-width: 768px) {
   .nav-toggle {
     display: none;
@@ -2234,6 +2236,29 @@ form#contact button:hover {
   color: #fff!important;
 }
 
+.submit {
+  cursor: pointer;
+  display: inline-block;
+  background-color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  color: #fa65b1;
+  margin-top: 30px;
+  width: 100%;
+  text-transform: capitalize;
+  padding: 12px 25px;
+  border-radius: 23px;
+  letter-spacing: 0.25px;
+  border: 1px solid #fa65b1;
+  transition: all .3s;
+  outline: none;
+}
+
+.submit:hover {
+  background-color: #fa65b1!important;
+  color: #fff!important;
+}
+
 /* 
 ---------------------------------------------
 Footer Style
@@ -2245,7 +2270,7 @@ footer {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 145px;
+  margin-top: 185px;
 }
 
 footer p {
@@ -2257,6 +2282,12 @@ footer p {
 footer p a {
   color: #fff;
   transition: all .5s;
+}
+.desc{
+  font-size: 15px;
+}
+.desc2{
+  position: absolute;top: 125px; right: 10px;
 }
 
 /* 
@@ -2349,9 +2380,55 @@ responsive
     padding: 45px;
   }
 }
-
+.kits{
+  position: absolute;
+  top: 125px;
+}
 @media (max-width: 767px) {
-    
+  
+  .dropdown-content
+  {
+    position: relative;
+    max-width: 100%;
+    text-align: center;
+    margin: auto;
+    background: none;
+    background-color: none;
+    box-shadow: none;
+  }
+  .about-left-image img{
+    transform: scale(105%);
+    position: relative;
+    left: 22%;
+      width: 55%;
+    overflow:hidden;
+    margin: auto;
+  }
+  .involve{
+    margin:auto;
+  }
+  .desc{
+    padding-bottom: 50px;
+    font-size: 10px;
+    width: 50%;
+    margin-top: -80px !important;
+    margin:auto;
+    display: block;;
+    text-align: center;
+  }
+  .desc1{
+    position: absolute;
+    top:15%;
+     right: 25%;
+  }
+  .kits{
+    top: 80px;
+  }
+  .dropdown-content a{
+    width: 100%;
+    background-color: none !important;
+    background: none !important;
+  }
   .header-area .main-nav .logo h4 {
     font-size: 30px;
   }
