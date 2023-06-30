@@ -87,7 +87,8 @@ for (var i = 0; i < navLinks.length; i++) {
     }
     if (
       !this.classList.contains("active") &&
-      !this.classList.contains("initiative")
+      !this.classList.contains("initiative") &&
+      !this.classList.contains("border-first-button") // Exclude "border-first-button" class
     ) {
       this.style.color = "#fa65b1";
     }
@@ -96,28 +97,9 @@ for (var i = 0; i < navLinks.length; i++) {
   navLinks[i].addEventListener("mouseleave", function () {
     if (
       !this.classList.contains("active") &&
-      !this.classList.contains("initiative")
+      !this.classList.contains("initiative") &&
+      !this.classList.contains("border-first-button") // Exclude "border-first-button" class
     ) {
-      this.style.color = "";
-    }
-  });
-}
-
-var dropdownLinks = document.querySelectorAll(".dropdown-content a");
-for (var i = 0; i < dropdownLinks.length; i++) {
-  dropdownLinks[i].addEventListener("mouseenter", function () {
-    for (var j = 0; j < dropdownLinks.length; j++) {
-      if (!dropdownLinks[j].classList.contains("active")) {
-        dropdownLinks[j].style.color = "";
-      }
-    }
-    if (!this.classList.contains("active")) {
-      this.style.color = "#fa65b1";
-    }
-  });
-
-  dropdownLinks[i].addEventListener("mouseleave", function () {
-    if (!this.classList.contains("active")) {
       this.style.color = "";
     }
   });

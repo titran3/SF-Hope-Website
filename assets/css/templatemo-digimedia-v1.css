@@ -216,6 +216,7 @@ body {
 }
 
 .border-first-button a {
+  line-height: 20px !important;
   display: inline-block !important;
   padding: 10px 20px !important;
   color: #fa65b1 !important;
@@ -683,6 +684,10 @@ header
   width: 30px;
   height: 2px;
   left: 0;
+}
+
+.hover:hover{
+  color:white!important;
 }
 
 .background-header .main-nav .menu-trigger span,
@@ -1545,20 +1550,20 @@ Services Style
 }
 
 .header-area .main-nav .nav li a:hover{
-  color: #fa65b1 !important;
+  color: #fa65b1;
 }
 
 .dropdown {
   position: relative;
   z-index: 9999;
 }
+
 .dropdown-content {
   position: absolute;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px;
-  width: max-content;
   min-width: 200px;
   white-space: nowrap;
   opacity: 0;
@@ -1571,15 +1576,6 @@ Services Style
 
 .fade-in {
   animation: fade-in 0.3s ease-in;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .involve {
@@ -1597,14 +1593,13 @@ Services Style
   text-align: center;
   vertical-align: middle;
   line-height: 75px;
-  
 }
 
 .involve a {
   color: #fa65b1;
-  transition: 0.5s background-color ease-in;
   transition: 0.15s color ease-in;
 }
+
 .involve:hover {
   transform: translateY(-5px);
   color: white;
@@ -1615,7 +1610,6 @@ Services Style
 .involve:hover a {
   color: white;
 }
-
 
 .dropdown-content a {
   color: black;
@@ -1642,7 +1636,35 @@ Services Style
 .nav li:not(.dropdown):not(.initiatives-dropdown) a:hover,
 .nav li a.active:not(.initiatives-dropdown) {
   color: #fa65b1;
-} 
+}
+
+/* Mobile-specific styles */
+
+.dropdown-mobile {
+  display: none;
+}
+
+.menu-icon {
+  cursor: pointer;
+}
+
+.dropdown-content-mobile {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  min-width: 200px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.dropdown-mobile input[type="checkbox"]:checked ~ .dropdown-content-mobile {
+  opacity: 1;
+}
+
 @media (min-width: 768px) {
   .nav-toggle {
     display: none;
@@ -2111,19 +2133,6 @@ form#contact:before {
   right: 25px;
   top: -242px;
 }
-
-form#contact:after {
-  background-image: url(../images/contact-bottom-right.png);
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 532px;
-  height: 106px;
-  background-repeat: no-repeat;
-  content: '';
-  z-index: 1;
-}
-
 form#contact {
   box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
   position: relative;
@@ -2429,7 +2438,7 @@ responsive
   }
   .desc1{
     position: absolute;
-    top:15%;
+    top:12%;
      right: 25%;
   }
   .kits{

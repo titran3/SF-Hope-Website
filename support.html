@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>SF Hope</title>
+    <title>SF Hope Website</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -71,8 +71,9 @@
                   <a href="/photo.html">Photo Gallery</a>
                 </div>
               </li>
-              <li class="scroll-to-section"><a href="/contact.html">Contact Us</a></li> 
-              <li class="scroll-to-section"><div class="buttonactive"><a href="/support.html">Support Us!</a></div></li> 
+              <li class="scroll-to-section"><a class="active" href="/contact.html">Contact Us</a></li> 
+              <li class="scroll-to-section"><div class="border-first-button"><a href="/support.html">Support Us!</a></div></li> 
+              <li></li> 
             </ul>         
             
             
@@ -97,7 +98,7 @@
         <div class="col-lg-6 offset-lg-3">
           <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
             <h6>Want to support us in empowering communities?</h6>
-            <h4>Message us beloww to financially support us or collaborate!</h4>
+            <h4>Message us below to financially support us or collaborate!</h4>
             <div class="line-dec"></div>
           </div>
         </div>
@@ -109,30 +110,25 @@
                   <img src="assets/images/contact-dec.png" alt="">
                 </div>
               </div>
-                    <div class="col-lg-6">
-                      <fieldset>
-                        <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
-                      </fieldset>
-                      <fieldset>
-                        <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
-                      </fieldset>
-                      <fieldset>
-                        <input type="subject" name="subject" id="subject" placeholder="Subject" autocomplete="on">
-                      </fieldset>
-                    </div>
-                    <div class="col-lg-6">
-                      <fieldset>
-                        <textarea name="message" type="text" class="form-control" id="message" placeholder="Message" required=""></textarea>  
-                      </fieldset>
-                    </div>
-                    <div class="col-lg-12">
-                      <fieldset>
-                        <button type="submit" id="form-submit" class="main-button ">Send Message Now</button>
-                      </fieldset>
-                    </div>
-                  </div>
-                </div>
+              <div class="col-lg-6">
+                <fieldset>
+                  <input type="name" name="name" id="name" placeholder="Name *" autocomplete="on" required>
+                </fieldset>
+                <fieldset>
+                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email *" required="">
+                </fieldset>
+                <fieldset>
+                  <input type="subject" name="subject" id="subject" placeholder="Subject" autocomplete="on">
+                </fieldset>
               </div>
+              <div class="col-lg-6">
+                <fieldset>
+                  <textarea name="message" type="text" class="form-control" id="message" placeholder="Message *" required=""></textarea>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                  <button type="button" onclick="sendEmail();" ontouchstart="sendEmail();" ontouchend="sendEmail();" class="submit">Send Message Now</button>
+              </div>                                    
             </div>
           </form>
         </div>
@@ -144,13 +140,10 @@
       <div class="row">
         <div class="col-lg-12">
           <p>2023 SF Hope | All Rights Reserved</p>
-
         </div>
       </div>
     </div>
   </footer>
-
-  <!-- Scripts -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
@@ -158,6 +151,63 @@
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/custom.js"></script>
   <script src="assets/js/scroll.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    function validateForm() {
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let message = document.getElementById("message").value;
+  
+      // Check that the name, email, and message fields are filled
+      if (name === "" || email === "" || message === "") {
+        return false;
+      }
+  
+      return true;
+      console.log("Form validated!");
+    }
+  
+    function sendEmail() {
+  if (validateForm()) {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let subject = document.getElementById("subject").value;
+    let msg = document.getElementById("message").value;
+    let body = "Name: " + name + "<br>" +
+               "Email: " + email + "<br>" +
+               "Message: " + msg + "<br>";
 
+    let submitButton = document.querySelector(".submit");
+    submitButton.innerHTML = "Sending...";
+
+    Email.send({
+      SecureToken: "1cee3289-cc5d-4776-b900-2f3b56709a7e",
+      To: "sanfranciscohopeproject@gmail.com",
+      From: "sanfranciscohopeproject@gmail.com",
+      Subject: "SF Hope Support Form: " + subject,
+      Body: body,
+    }).then(
+      function (message) {
+        alert("Your message has been sent successfully!");
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("subject").value = "";
+        document.getElementById("message").value = "";
+        submitButton.innerHTML = "Send Message Now";
+      },
+      function (error) {
+        alert("There was an error sending your message. Please try again later.");
+        console.log(error);
+        submitButton.innerHTML = "Send Message Now";
+      }
+    );
+  } else {
+    alert("Please fill in all the required fields.");
+  }
+}
+  </script>
+  
+  
 </body>
+
 </html>
