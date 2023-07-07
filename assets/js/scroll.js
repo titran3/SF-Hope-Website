@@ -15,6 +15,47 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+  window.addEventListener('DOMContentLoaded', () => {
+    const boxes = document.getElementsByClassName('box');
+    for (let i = 0; i < boxes.length; i++) {
+      const box = boxes[i];
+      const textLength = box.innerText.trim().split(' ').length;
+      const margin = textLength <= 3 ? '2px' : '5px'; // Adjust the margin based on text length
+      box.style.margin = margin;
+    }
+  });
+
+  function isMobileDevice() {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+  }
+  // Add an extra <li></li> element after the "Support" menu item for mobile devices
+// Add an extra <li></li> element after the "Support" menu item for mobile devices
+if (isMobileDevice()) {
+  var mainMenu = document.getElementById('mainMenu');
+  var supportMenuItem = mainMenu.querySelector('li#supportMenuItem');
+  var extraMenuItem = document.createElement('li');
+  extraMenuItem.innerHTML = '&nbsp;'; // You can add content or styling here if needed
+  supportMenuItem.parentNode.insertBefore(extraMenuItem, supportMenuItem.nextSibling);
+}
+
+setTimeout(function() {
+  var splashScreen = document.getElementById('splashScreen');
+  splashScreen.style.animation = 'slideoutup 1s ease-in-out';
+
+  // Remove the splash screen after the fadeoutup animation is completed
+  setTimeout(function() {
+    splashScreen.style.display = 'none';
+  }, 1000);
+}, 1000);
+if (window.matchMedia('(min-width: 768px)').matches) {
+  // Remove the animation and hide the splash screen after the specified duration
+  setTimeout(function() {
+    var splashScreen = document.getElementById('splashScreen');
+    splashScreen.style.animation = 'none';
+    splashScreen.style.display = 'none';
+  }, 1000); // Adjust the duration as needed (in milliseconds)
+}
+
 function toggleDropdown(dropdownId) {
   var dropdown = document.getElementById(dropdownId);
   var link = document.getElementById(dropdownId + "Link");
