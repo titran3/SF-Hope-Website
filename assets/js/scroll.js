@@ -40,21 +40,13 @@ if (isMobileDevice()) {
 
 setTimeout(function() {
   var splashScreen = document.getElementById('splashScreen');
-  splashScreen.style.animation = 'slideoutup 1s ease-in-out';
+  splashScreen.style.animation = 'slideoutup 1s ease-in-out forwards';
 
-  // Remove the splash screen after the fadeoutup animation is completed
+  // Remove the splash screen after the slideoutup animation is completed
   setTimeout(function() {
     splashScreen.style.display = 'none';
   }, 1000);
 }, 1000);
-if (window.matchMedia('(min-width: 768px)').matches) {
-  // Remove the animation and hide the splash screen after the specified duration
-  setTimeout(function() {
-    var splashScreen = document.getElementById('splashScreen');
-    splashScreen.style.animation = 'none';
-    splashScreen.style.display = 'none';
-  }, 1000); // Adjust the duration as needed (in milliseconds)
-}
 
 function toggleDropdown(dropdownId) {
   var dropdown = document.getElementById(dropdownId);
