@@ -46,7 +46,16 @@ setTimeout(function() {
   setTimeout(function() {
     splashScreen.style.display = 'none';
   }, 1000);
-}, 1000);
+}, 1000); 
+
+var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+if (mobile){
+  setTimeout(function()
+  {
+    splash = document.querySelector(".splash-screen");
+    splash.display.block= "none";
+  }, 1000)
+}
 
 function toggleDropdown(dropdownId) {
   var dropdown = document.getElementById(dropdownId);

@@ -318,7 +318,7 @@ background: linear-gradient(160deg, rgba(255,145,253,1) 0%, rgba(234,9,255,1) 10
 
 @media (max-width: 767px) {
   .splash-screen {
-    display: none;
+    display:none;
   }
 }
 
@@ -2450,6 +2450,7 @@ responsive
 }
 @media (max-width: 767px) {
   
+
   .dropdown-content
   {
     position: relative;
@@ -2473,7 +2474,7 @@ responsive
   }
   .desc{
     padding-bottom: 50px;
-    font-size: 10px;
+    font-size: 15px;
     width: 50%;
     margin-top: -80px !important;
     margin:auto;
