@@ -306,6 +306,21 @@ background: linear-gradient(160deg, rgba(255,145,253,1) 0%, rgba(234,9,255,1) 10
   color: white; /* Set your desired text color */
 }
 
+@keyframes up {
+  0% {
+    transform: translateY(0%);
+  }
+  0.08% {
+    transform: translateY(0%);
+  }
+  0.13% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
 @keyframes slideoutup {
   0% {
     opacity: 1;
@@ -317,9 +332,6 @@ background: linear-gradient(160deg, rgba(255,145,253,1) 0%, rgba(234,9,255,1) 10
 }
 
 @media (max-width: 767px) {
-  .splash-screen {
-    display:none;
-  }
 }
 
 @keyframes fadeoutup {
@@ -2312,6 +2324,10 @@ form#contact button:hover {
   color: #fff!important;
 }
 
+.percent{
+  width: 100%;
+}
+
 /* 
 ---------------------------------------------
 Footer Style
@@ -2583,6 +2599,14 @@ responsive
   }
   .textleft{
     text-align: center;
+    margin: auto;
+    display: block;
+  }
+  .percent {
+    width: 50%;
+  }
+  .splash-screen{
+    animation: up 2000s ease-in-out;
   }
   
 }
