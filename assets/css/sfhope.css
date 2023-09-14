@@ -2328,6 +2328,20 @@ form#contact button:hover {
   width: 100%;
 }
 
+.photos{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.photo{
+  margin: 5px;
+  width: 40% !important;
+  height: 40%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
 /* 
 ---------------------------------------------
 Footer Style
@@ -2607,6 +2621,20 @@ responsive
   }
   .splash-screen{
     animation: up 2000s ease-in-out;
+  }
+
+  .form{
+    margin: auto;
+    display: block;
+    width: 90%;
+  }
+
+  .photo{
+    margin: 5px;
+    width: 100% !important;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
   }
   
 }
