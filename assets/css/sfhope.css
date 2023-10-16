@@ -2342,6 +2342,10 @@ form#contact button:hover {
   border-radius: 15px;
 }
 
+.mobi{
+  width: 28%;
+}
+
 /* 
 ---------------------------------------------
 Footer Style
@@ -2480,6 +2484,9 @@ responsive
 }
 @media (max-width: 767px) {
   
+  .mobi{
+    width: 100% !important;
+  }
 
   .dropdown-content
   {
